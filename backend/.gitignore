@@ -1,0 +1,27 @@
+# ── Python ──
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.pytest_cache/
+
+# ── Environment ──
+.env
+.env.*
+!.env.example
+
+# ── Virtual Environment ──
+.venv/
+venv/
+
+# ── IDE ──
+.idea/
+.vscode/
+*.swp
+
+# ── Logs ──
+*.log
+
+# ── System ──
+.DS_Store
+Thumbs.db

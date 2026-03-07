@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  # 1. MongoDB (Bunu ekledik - Veritabani)
+  mongo:
+    image: mongo:6
+    container_name: ireland-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  # 2. MinIO (Fotograf Depolama)
+  minio:
+    image: minio/minio:latest
+    container_name: ireland-minio
+    ports:
+      - "9000:9000"   # S3 API
+      - "9001:9001"   # MinIO Console
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin123
+    command: server /data --console-address ":9001"
+    volumes:
+      - minio_data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 30s
+      timeout: 20s
+      retries: 3
+
+  # 3. MailHog (E-posta Testi)
+  mailhog:
+    image: mailhog/mailhog:latest
+    container_name: ireland-mailhog
+    ports:
+      - "1025:1025"   # SMTP server
+      - "8025:8025"   # Web UI
+    logging:
+      driver: "none"
+
+  # 4. Inference Server (Disabled to avoid conflict with local Ollama)
+  # inference-server:
+  #   image: ollama/ollama:latest
+  #   container_name: ireland-inference
+  #   ports:
+  #     - "11434:11434"
+  #   volumes:
+  #     - ollama_data:/root/.ollama
+  #   # GPU section...
+  #   # deploy: ...
+
+volumes:
+  mongo_data:
+  minio_data:
+  ollama_data:
