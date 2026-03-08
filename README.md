@@ -6,21 +6,21 @@
 ## 2. Project Description
 Imagine a tourist arriving in Ireland, eager to explore its rich history and breathtaking landscapes, only to be met with unpredictable weather, overcrowded hotspots, and static, uninspiring guidebooks. On the flip side, local authorities struggle to manage the sheer volume of visitors while simultaneously protecting centuries-old heritage sites from unnoticed wear-and-tear or damage.
 
-**Ireland Explorer** bridges this gap. It is a comprehensive, AI-driven travel management platform powered by a highly resilient **Hybrid Multi-Agent Architecture**. Rather than acting as a simple chatbot, our system deploys a team of specialized, autonomous AI agents—a *Planner*, a *Safety Validator*, an *Experience Coach*, and a *Fraud/Damage Detector*. Together, they craft dynamic, hyper-personalized travel itineraries, generate rich bilingual (Gaeilge/English) narratives that react to the user's ongoing journey, and provide a verified, crowdsourced mechanism for citizens and tourists to report infrastructure damage directly to authorities.
+**Ireland Explorer** bridges this gap. It is a comprehensive, AI-driven travel management platform powered by a highly resilient **Hybrid Multi-Agent Architecture**. Rather than acting as a simple chatbot, mysystem deploys a team of specialized, autonomous AI agents—a *Planner*, a *Safety Validator*, an *Experience Coach*, and a *Fraud/Damage Detector*. Together, they craft dynamic, hyper-personalized travel itineraries, generate rich bilingual (Gaeilge/English) narratives that react to the user's ongoing journey, and provide a verified, crowdsourced mechanism for citizens and tourists to report infrastructure damage directly to authorities.
 
 ## 3. How Can This Project Help Ireland
 **The Irish Challenge:** Ireland faces a unique trilemma: sustainably managing the booming tourism sector, preserving its ancient and fragile cultural heritage, and keeping the Irish language (Gaeilge) alive and relevant in the digital age—all while navigating famously unpredictable weather.
 
-**Our Solution:**
+**My Solution:**
 *   🧭 **Smarter Footfall Distribution:** Real-time, AI-driven routing redirects tourists away from overwhelmed hotspots (like the Cliffs of Moher at peak hours) towards hidden local gems, distributing economic benefits across wider regions.
-*   🗣️ **Digital Cultural Preservation:** Our *ExperienceCoachAgent* actively weaves the Irish language and authentic local lore into every step of the journey, ensuring the cultural depth of Ireland is the centerpiece of the tourist experience, not an afterthought.
+*   🗣️ **Digital Cultural Preservation:** my*ExperienceCoachAgent* actively weaves the Irish language and authentic local lore into every step of the journey, ensuring the cultural depth of Ireland is the centerpiece of the tourist experience, not an afterthought.
 *   🛡️ **Proactive Heritage Maintenance:** Through AI-validated citizen reporting, local councils can instantly detect, classify, and respond to vandalism or weather damage at heritage sites, drastically reducing inspection costs and response times.
 *   ⛈️ **Dynamic Weather Safety:** The *SafetyValidatorAgent* actively monitors conditions, automatically rerouting tourists away from dangerous coastal cliffs during high winds—preventing accidents before they happen.
 
 ## 4. Project Innovation
-Our core AI innovation is **Guarded Autonomy via Native Agentic Orchestration**. 
+mycore AI innovation is **Guarded Autonomy via Native Agentic Orchestration**. 
 
-Instead of relying on fragile, "black-box" frameworks that often hallucinate or crash during complex tasks, we engineered a native, self-correcting Orchestrator built purely on Core Python. Our agents utilize dynamic **Feedback Loops**. For example, if the *Planner Agent* suggests a coastal route during a storm, the *Safety Validator Agent* physically intercepts the output, rejects it, and forces the Planner to generate a safe, indoor alternative. This ensures 100% policy compliance without taking the human user out of the loop.
+Instead of relying on fragile, "black-box" frameworks that often hallucinate or crash during complex tasks, Iengineered a native, self-correcting Orchestrator built purely on Core Python. myagents utilize dynamic **Feedback Loops**. For example, if the *Planner Agent* suggests a coastal route during a storm, the *Safety Validator Agent* physically intercepts the output, rejects it, and forces the Planner to generate a safe, indoor alternative. This ensures 100% policy compliance without taking the human user out of the loop.
 
 ## 5. Expected Impacts
 *   **Economic:** Fairer distribution of tourism-generated revenue to rural and off-the-beaten-path businesses.
@@ -38,11 +38,11 @@ Instead of relying on fragile, "black-box" frameworks that often hallucinate or 
 *   **Storage & Security:** MinIO (S3-compatible) for encrypted object storage of user photos, and relational structuring for tracking verified damage reports. 
 
 ## 2. AI System Framework Specification
-**A Deliberate Departure from the Mainstream:** We expressly **chose not to use** generic frameworks like LangChain, AutoGen, or CrewAI. In a production-ready, safety-critical tourism app, those frameworks introduce 'Spaghetti Code', excessive token bloat, and uncontrolled hallucination risks.
+**A Deliberate Departure from the Mainstream:** Iexpressly **chose not to use** generic frameworks like LangChain, AutoGen, or CrewAI. In a production-ready, safety-critical tourism app, those frameworks introduce 'Spaghetti Code', excessive token bloat, and uncontrolled hallucination risks.
 
-Instead, our framework consists of:
+Instead, myframework consists of:
 *   **Core Python Asyncio & Pydantic:** For strict, type-safe schema validation between agents.
-*   **Tenacity (Resilience Network):** To handle LLM timeouts. If the AI provider fails, our network uses exponential backoffs to retry, or seamlessly falls back to a deterministic algorithm to ensure the app *never* crashes.
+*   **Tenacity (Resilience Network):** To handle LLM timeouts. If the AI provider fails, mynetwork uses exponential backoffs to retry, or seamlessly falls back to a deterministic algorithm to ensure the app *never* crashes.
 *   **Specialized Native Agents:**
     *   `ItineraryPlannerAgent`: Orchestrates Tool-Use (Weather APIs, OSM Data).
     *   `ExperienceCoachAgent`: Maintains "Stateful Memory" of the user's trip to generate context-aware Gaeilge/English stories.
@@ -62,9 +62,9 @@ Instead, our framework consists of:
 ## 1. Novelty
 The true technical novelty of *Ireland Explorer* is its **Zero-Crash, Self-Correcting Architecture**.
 
-1.  **Dynamic Self-Correction:** Most LLM apps accept the first generated response. Our Orchestrator reviews the AI's work using a separate AI. If a safety threshold is breached, the Orchestrator initiates an internal ReAct loop to fix the issue before the user ever sees it.
+1.  **Dynamic Self-Correction:** Most LLM apps accept the first generated response. myOrchestrator reviews the AI's work using a separate AI. If a safety threshold is breached, the Orchestrator initiates an internal ReAct loop to fix the issue before the user ever sees it.
 2.  **Stateful Agent Memory:** The *Experience Coach* knows where the user has been. If a user visits Dublin Castle and then goes to a park, the AI will contextually say, *"After the thick stone walls of the castle, the open green of this park will feel incredibly refreshing."*
-3.  **Deterministic AI Guardrails:** We blend probabilistic LLM reasoning with hard math. We use Dijkstra-style distance calculations to narrow down hundreds of locations to the top 10, and *only then* engage the LLM to pick the top 3 based on 'vibe' and user pace. This saves massive token costs and eliminates geographic hallucinations.
+3.  **Deterministic AI Guardrails:** Iblend probabilistic LLM reasoning with hard math. Iuse Dijkstra-style distance calculations to narrow down hundreds of locations to the top 10, and *only then* engage the LLM to pick the top 3 based on 'vibe' and user pace. This saves massive token costs and eliminates geographic hallucinations.
 
 ### 🏗️ Agentic System Architecture
 ```text
@@ -99,7 +99,7 @@ All necessary files to build, run, and review the project are included in the re
     *   📱 `frontend/` - The React Native mobile application for the tourist interface.
     *   🐳 `docker-compose.yml` - One-click infrastructure deployment (Backend, MinIO Storage, MailHog).
 *   **How to Run:**
-    Simply run `docker-compose up -d` to launch the backend, storage, and email services, followed by `npm run start` in your frontend directory to launch the mobile companion. 
+    Simply run `docker-compose up -d` to launch the backend, storage, and email services, followed by `npm run start` in ymyfrontend directory to launch the mobile companion. 
 *   **Live Demo / Video:** *(Insert Link to Demo Video Here)*
 
 ---
